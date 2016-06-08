@@ -1,3 +1,4 @@
+#!/bin/usr/python
 
 #Loads in 2 password files formated as user:password and opens a output file.
 file1 = ""
@@ -22,6 +23,7 @@ with open(file1 ,"r") as pw1:
 				
 				#Check if password matches, if they do, write it to an outfile.
 				if password == password2:
-					#matches.write('z3user: ' + zon3user + ' and z2user: ' + zon2user + ' have same password in both zones') ##Send this to new file instead of cmd
-					matches.write('User: ' + user + ' and User: ' + user2 + '\n') ##writing the results to file.
+					matches.write('{}' + user + ' {} ' + user2 + '\n').format('User: ', 'and User: ') ##writing the results to file.
+file1.close()
+file2.close()
 matches.close()
